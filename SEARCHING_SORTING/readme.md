@@ -13,3 +13,11 @@ Implementing different sorting and searching algorithms.
                     It is adaptive in nature (not good for partially sorted array).
                     Worst case time Complexity :- O(n^2)
                     It is inplace and stable.
+                    
+~ Selection Sort :- The smallest element is placed in the correct position after every pass
+                    Best case time complexity - O(N^2)
+                    Worst case time complexity - O(N^2)
+                    It is an inplace sorting algorithm and doesnt require extra space. 
+                    Auxilliary space requirement is :- O(1)
+                    It is not a stable sorting algo but can be improvised and made stable with certain changes.
+                    The improvisation simply replaces the swap function and uses the shifting technique like in insertion sort.
