@@ -21,3 +21,16 @@ Implementing different sorting and searching algorithms.
                     Auxilliary space requirement is :- O(1)
                     It is not a stable sorting algo but can be improvised and made stable with certain changes.
                     The improvisation simply replaces the swap function and uses the shifting technique like in insertion sort.
+
+~ Merge Sort :-  Recurrsively breaking the input array into smaller arrays of single elements and then merging them in order.
+                 Faster than selection,bubble and insertion sort.
+                 It is based on the divided and conquer approach.
+                 In Best, average as well as in worst case, the time complexity of merge sort is O(nlogn)
+                 Auxiliary space requirement is O(n)
+                 Therefore, it is not a inplace sorting.
+                 It is a stable sorting algorithm.
+                 Unlike an array, the insertion and deletion in linked list can be done in constant time. 
+                 Therefore,in case of merge sort implementation in linked list, no extra space is required and then it is a inplace sorting algorithm.
+                 It goes throught the whole process even if the array is sorted. 
+                 For smaller input size, it is slower comparitive to other sorting algorithms.
+                 Used in external sorting.
