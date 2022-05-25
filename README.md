@@ -1,3 +1,3 @@
 # DATA_STRUCTURES
 
-Implementiing different data structures in c++.
+Implementiing different data structures in C++.
