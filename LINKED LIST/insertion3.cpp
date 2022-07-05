@@ -11,6 +11,12 @@ class node{
     }
 
 };
+void insert_at_head(node* &head, int data)
+{
+    node *newnode= new node(data);
+    newnode->next=head;
+    head=newnode;
+}
 void insert_at_specific_pos(node* pos, int data){
 node *newnode= new node(data);
 newnode->next=pos->next;
@@ -51,6 +57,9 @@ int main()
     }
     cout<<"\nEnter the data you want to enter in the node : ";
     cin>>data;
+    if(p==1)
+    insert_at_head(head,data);
+    else
     insert_at_specific_pos(pos,data);
     cout<<"\n\nThe linked list after the insertion is : ";
 
