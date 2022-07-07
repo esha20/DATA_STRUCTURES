@@ -1,3 +1,4 @@
+//program to delete node from head and specific position
 #include<bits/stdc++.h>
 using namespace std;
 class node{
