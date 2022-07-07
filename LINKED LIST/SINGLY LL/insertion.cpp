@@ -1,4 +1,4 @@
-//insertion of node at the head of the Linkedlist.
+//program for insertion of node at the head of the Linkedlist.
 #include<bits/stdc++.h>
 using namespace std;
 class node{
