@@ -1,3 +1,4 @@
+//program to delete the node when the data to delete is given.
 #include<bits/stdc++.h>
 using namespace std;
 class node{
