@@ -1,3 +1,4 @@
+//program for insertion at the tail
 #include<bits/stdc++.h>
 using namespace std;
 class node{
@@ -11,6 +12,7 @@ node(int data)
     this->next=next;
 }
 };
+
 void insert_at_end(node* &tail, int data){
 
 node *newnode= new node(data);
@@ -19,6 +21,7 @@ tail->next=newnode;
 newnode->next=NULL;
 tail=newnode;
 }
+
 void print(node* &head)
 {
 //traversing through the linked list
@@ -30,6 +33,7 @@ while(temp!=NULL)
 }
 cout<<endl;
 }
+
 int main()
 {
     node * node1=new node(10);
