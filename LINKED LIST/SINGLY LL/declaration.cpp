@@ -6,7 +6,7 @@ int data;
 node *next;
 node()
 {
-    //default constructor
+    //default constructor called
     this->data=data;
     this->next=next;
 }
