@@ -41,12 +41,87 @@ node* buildTree(node* root){
 
     return root;            // jab ek bar ban jaye toh ham root tak pohuch jate hai aur root return kar denge.
 }
+
+void buildTreeLOT(node* &root){
+    int data;
+    cout<<"Enter the data : ";
+    cin>>data;
+
+    //root banao
+    root = new node(data);
+
+    queue <node*> q;
+
+    //root ko push karo
+    q.push(root);
+    // q.push(NULL);        dont need a separator because we are only going to take values to build the tree and not print the bfs in this function.
+
+    while(!q.empty()){
+        node* temp = q.front();
+        q.pop();
+
+        int leftdata;
+        cout<<"Enter the left node for "<<temp->data<<endl;
+        cin>>leftdata;
+
+        //left node banao
+        if(leftdata != -1){
+            temp->left = new node(leftdata);
+            q.push(temp->left);
+        }
+
+        int rightdata;
+        cout<<"Enter the node for the right node of "<<temp->data<<endl;
+        cin>>rightdata;
+
+        //right node banao
+        if(rightdata != -1 ){
+            temp->right = new node(rightdata);
+            q.push(temp->right);
+        }
+    }
+}
+
+void levelOrderTraversal(node* root){
+    queue <node*> q;
+    q.push(root);
+    q.push(NULL);
+
+    while(!q.empty()){
+        node * temp = q.front();
+        q.pop();
+
+        if(temp == NULL){
+            cout<<endl;
+
+            if(!q.empty()){
+                q.push(NULL);
+            }
+        }
+        else{
+            cout<<temp->data<<" ";
+            if(temp->left){
+                q.push(temp->left);
+            }
+            if(temp->right)
+            {
+                q.push(temp->right);
+            }
+        }
+    }
+}
+
 int main()
 {
     node * root = NULL;
 
     //to build the tree we are going to use this function.
-    root = buildTree(root);
+    // root = buildTree(root);
 
+    //using levelordertraversal to build the tree
+    buildTreeLOT(root);
+
+    //to check if the tree is build successfully, we will make the bfs (level order traversal of the tree)
+    levelOrderTraversal(root);
     return 0;
 }
