@@ -8,6 +8,8 @@ class node{
     int data;
     node* left;
     node* right;
+
+    //constructor for the node
     node(int val){
         data = val;
         left=right=NULL;
@@ -29,14 +31,19 @@ node* buildTree(node* root){
     cin>>data;
 
     root = new node(data);
+
+    //-1 means no data is to be inserted and no node is to be made and that this is the leaf node of the tree with no further children nodes.
     if(data == -1)
         return NULL;
     
     cout<<"Enter the data you want to enter to the left of the node : "<<data<<endl;
+
+    //build the left subtree using recursion
     root->left = buildTree(root->left);             //last left node tak pehle jata hai fir jab null milta hai toh back jata hai fir right dekhta hai 
     // agar right mei koi node mil jaye toh uske bhi left ei check karta hai last tak fir dubara right dekhta hai back jakr.
 
     cout<<"Enter the data you want to enter to the right of the node : "<<data<<endl;
+    //build the right subtree using recursion
     root->right = buildTree(root->right);
 
     return root;            // jab ek bar ban jaye toh ham root tak pohuch jate hai aur root return kar denge.
@@ -120,6 +127,8 @@ int main()
 
     //using levelordertraversal to build the tree
     buildTreeLOT(root);
+
+    //we can change the above sentence as root = buildTreeLOT(root) if we return the root from the function and set the return type as node*
 
     //to check if the tree is build successfully, we will make the bfs (level order traversal of the tree)
     levelOrderTraversal(root);
