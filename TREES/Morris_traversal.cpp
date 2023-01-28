@@ -56,6 +56,8 @@ void morristraversal(node* curr){
             //find the inorder predecessor of the current node
             //how?  go to the left first and then move right untill right becomes null
             pre = curr->left;
+            //while the right node of predecessor exists gi further and check if this predecessor was not already pointed to current in som previous iteration
+            //i.e. check if this procedure was already done for this node's predecessor by checking pre->right!=current node.
             while(pre->right && pre->right != curr)
                 pre=pre->right;
             
